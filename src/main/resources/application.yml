@@ -1,9 +1,17 @@
+---
+
 server:
-  port: 9001
-  context-path: /services
+  port: 9003
 security:
   oauth2:
     resource:
-      #user-info-uri: https://api.github.com/user
-      user-info-uri: http://localhost:9000/services/user
+      user-info-uri: ${oauth.client.user.info.uri}
+spring:
+  application:
+    name: amisoft-secure-resource
+  cloud:
+    consul:
+      host: ${consul.host}
+      port: ${consul.port}
+
 
