@@ -13,5 +13,8 @@ spring:
     consul:
       host: ${consul.host}
       port: ${consul.port}
+  sleuth:
+      sampler:
+        percentage: ${zipkin.sleuth.sampler.percentage}
 
 
